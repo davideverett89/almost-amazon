@@ -1,11 +1,9 @@
 import utilities from '../helpers/utilities.js';
 import bookData from '../helpers/data/bookData.js';
+import cart from './cart.js';
 
 const addToCartEvent = () => {
-    console.log("You clicked add to card");
-    // let domString = "";
-    // domString += 'THIS IS THE CART';
-    // utilities.printToDom("cart-container", domString);
+    cart.cartToDom();
 };
 
 const makeStore = () => {
@@ -17,4 +15,4 @@ const makeStore = () => {
     document.getElementById("add-to-cart-button").addEventListener("click", addToCartEvent);
 };
 
-export default { makeStore }
+export default { makeStore };
